@@ -1,0 +1,19 @@
+.background-box {
+  position: relative;
+  height: 400px;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.logo {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  background-image: url(jihonglogo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }

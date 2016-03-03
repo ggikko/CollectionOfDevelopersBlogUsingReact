@@ -1,0 +1,160 @@
+@charset "UTF-8";
+body {
+  font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif; }
+
+h1 {
+  color: #ccc;
+  weight: 300;
+  font-size: 20px;
+  margin: 40px; }
+
+figure {
+  margin: auto; }
+
+.content article {
+  padding: 30px 0;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px; }
+  .content article hr {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .content article p {
+    margin-bottom: 10px; }
+  .content article img {
+    max-width: 100%; }
+  .content article .posts {
+    overflow: hidden;
+    margin: 20px; }
+    .content article .posts .blog {
+      position: relative;
+      border: 1px solid #e1e1e1;
+      display: block;
+      float: left;
+      width: 26%;
+      height: 210px;
+      padding: 10px;
+      margin: 10px;
+      background: white;
+      transform: translate(100px, 20px); }
+      .content article .posts .blog h5 {
+        margin-top: 5px; }
+      .content article .posts .blog .logo-wrap {
+        height: 100px;
+        width: 120px;
+        margin: 0 auto; }
+        .content article .posts .blog .logo-wrap img {
+          margin-top: 30px; }
+    .content article .posts .github {
+      position: relative;
+      border: 1px solid #e1e1e1;
+      display: block;
+      float: left;
+      width: 26%;
+      height: 210px;
+      padding: 10px;
+      margin: 10px;
+      background: white;
+      z-index: 2; }
+      .content article .posts .github h5 {
+        margin-top: 5px; }
+      .content article .posts .github .logo-wrap {
+        height: 100px;
+        width: 120px;
+        margin: 0px auto; }
+        .content article .posts .github .logo-wrap img {
+          margin: 10px auto; }
+    .content article .posts .email {
+      position: relative;
+      border: 1px solid #e1e1e1;
+      display: block;
+      float: left;
+      width: 26%;
+      height: 210px;
+      padding: 10px;
+      margin: 10px;
+      background: white;
+      transform: translate(-100px, 20px); }
+      .content article .posts .email h5 {
+        margin-top: 5px; }
+      .content article .posts .email .logo-wrap {
+        height: 100px;
+        width: 150px; }
+        .content article .posts .email .logo-wrap img {
+          display: block;
+          line-height: 100%; }
+  .content article .introduce h1 {
+    display: block; }
+  .content article .introduce p {
+    text-indent: 1em;
+    text-align: left;
+    line-height: 170%; }
+
+.experience-pics {
+  overflow: hidden; }
+  .experience-pics figure {
+    position: relative;
+    width: 21%;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 40px;
+    margin-left: 14px;
+    margin-right: 10px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer; }
+    .experience-pics figure img {
+      display: block;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out; }
+    .experience-pics figure figcaption {
+      position: absolute;
+      background: #000;
+      padding: 2px 8px;
+      left: 0px;
+      bottom: 0px;
+      color: white;
+      font-size: 11px;
+      bottom: 10px;
+      left: -100%;
+      transition: all 0.3s ease-in-out; }
+    .experience-pics figure.is-showing {
+      opacity: 1;
+      transform: translateX(0px); }
+    .experience-pics figure:hover figcaption {
+      left: 0%; }
+    .experience-pics figure:hover img {
+      transform: scale(1.1); }
+
+.large-window {
+  height: 680px;
+  width-max: 100%;
+  border-radius: 50%;
+  margin-bottom: 100px;
+  background-image: url(largeparkjihong.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 70%;
+  background-margin-top: 100px; }
+
+.button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
