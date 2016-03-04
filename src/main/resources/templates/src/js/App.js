@@ -3,12 +3,12 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Greeting from './component/Greeting.js';
+import Layout from './component/Layout.js';
 
 class App{
     static main(){
         ReactDOM.render(
-            <Greeting/>,
+            <Layout/>,
             document.getElementById('app')
         );
     }

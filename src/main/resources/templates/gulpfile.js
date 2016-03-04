@@ -11,6 +11,8 @@ const gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     browserify = require('browserify'),
     babelify = require('babelify'),
+    express = require('express'),
+    instant = require('instant'),
     source = require('vinyl-source-stream');
 
 //webpack
@@ -38,17 +40,29 @@ const gulp = require('gulp'),
 //        .pipe(gulp.dest('css'));
 //});
 
+gulp.task('server',  function(){
+    const app = express();
+    app.use(instant({root : 'public'}));
+    app.get('*', function(req, res){
+        res.sendfile('./index.html');
+    });
+
+    app.listen(3000, function(){
+        console.log("it works!");
+    });
+})
+
 //watch
 gulp.task('watch', function() {
     gulp.watch('src/js/**/*.js', ['react']);
 });
 
 gulp.task('react', function(){
-    return browserify('js/App.js',{
+    return browserify('src/js/App.js',{
         debug:true
     })
     .transform(babelify.configure({
-            presets:['es2015', 'react' ]
+            presets:['es2015', 'react']
         }))
     .bundle()
     .pipe(source('bundle.js'))
@@ -56,4 +70,4 @@ gulp.task('react', function(){
 })
 
 //all task
-gulp.task('default', ['watch','react']);
+gulp.task('default', ['watch','react', 'server']);

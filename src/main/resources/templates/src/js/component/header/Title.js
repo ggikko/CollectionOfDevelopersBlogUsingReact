@@ -3,12 +3,12 @@
  */
 import React from 'react';
 
-class Greeting extends React.Component{
+class Title extends React.Component{
     render(){
         return (
-            <h1>hello world!!!!</h1>
+            <h1>Hello ggikko!</h1>
         );
     }
 }
 
-export default Greeting;
+export default Title;
